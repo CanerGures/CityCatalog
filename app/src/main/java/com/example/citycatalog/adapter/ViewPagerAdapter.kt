@@ -11,7 +11,7 @@ import com.example.citycatalog.model.Model
 import kotlinx.android.synthetic.main.carditem.view.*
 
 class ViewPagerAdapter(
-    private val features: List<Model>
+    private val features: ArrayList<Model>
 ) : RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
     inner class ViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

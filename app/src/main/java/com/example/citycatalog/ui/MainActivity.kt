@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnNext.setOnClickListener {
-            val intent = Intent(this, CityActivityIstanbul::class.java)
+            val intent = Intent(this, CityActivityHawaii::class.java)
             startActivity(intent)
         }
 
