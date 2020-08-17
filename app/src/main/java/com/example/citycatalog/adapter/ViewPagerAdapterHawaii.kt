@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.citycatalog.R
 import com.example.citycatalog.model.TravelLocationModel
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_container_location.view.*
 
 class ViewPagerAdapterHawaii(
@@ -40,14 +40,11 @@ class ViewPagerAdapterHawaii(
         holder.textTitle.text = currentItem.title
         holder.textLocation.text = currentItem.location
         holder.textStarRating.text = currentItem.starRating.toString()
-        Picasso.get()
+
+        Glide.with(holder.itemView.context)
             .load(currentItem.imageUrl)
-            //.fit()
-            //.resize(480, 640)
-            //.onlyScaleDown()
+            .fitCenter()
             .into(holder.kbvLocation)
-
-
     }
 
 }

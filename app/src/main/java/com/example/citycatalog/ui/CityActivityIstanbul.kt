@@ -2,8 +2,11 @@ package com.example.citycatalog.ui
 
 import android.animation.ArgbEvaluator
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.PagerAdapter
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.citycatalog.R
 import com.example.citycatalog.adapter.ViewPagerAdapter
@@ -53,8 +56,19 @@ class CityActivityIstanbul : AppCompatActivity() {
         viewPager.adapter = ViewPagerAdapter(list)
         viewPager.setPadding(130, 0, 130, 0)
         viewPager.offscreenPageLimit = 3
+        viewPager.clipToPadding = false
+        viewPager.clipChildren = false
 
-        //viewPager.setOnPageChangeListener()
+        val compositePageTransformer = CompositePageTransformer()
+        compositePageTransformer.addTransformer(MarginPageTransformer(40))
+        compositePageTransformer.addTransformer(ViewPager2.PageTransformer { view: View, fl: Float ->
+            fun transformPage(page: View, position: Float) {
+                val r = 1 - Math.abs(position)
+                page.scaleY = 0.95f + r * 0.05f
+            }
+        })
+
+        viewPager.setPageTransformer(compositePageTransformer)
     }
 
 

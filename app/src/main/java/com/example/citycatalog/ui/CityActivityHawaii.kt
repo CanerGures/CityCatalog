@@ -1,10 +1,12 @@
 package com.example.citycatalog.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.citycatalog.R
 import com.example.citycatalog.adapter.ViewPagerAdapterHawaii
@@ -58,15 +60,15 @@ class CityActivityHawaii : AppCompatActivity() {
         viewPager.offscreenPageLimit = 3
         viewPager.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
-        /*val compositePageTransformer = CompositePageTransformer()
+        val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer(40))
-        compositePageTransformer.addTransformer(ViewPager2.PageTransformer() { view: View, fl: Float ->
-             fun transformPage(page: View, position: Float) {
+        compositePageTransformer.addTransformer(ViewPager2.PageTransformer { view: View, fl: Float ->
+            fun transformPage(page: View, position: Float) {
                 val r = 1 - Math.abs(position)
                 page.scaleY = 0.95f + r * 0.05f
             }
         })
 
-        viewPager.setPageTransformer(compositePageTransformer)*/
+        viewPager.setPageTransformer(compositePageTransformer)
     }
 }
