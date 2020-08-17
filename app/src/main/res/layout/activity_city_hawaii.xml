@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".ui.CityActivityHawaii">
+    android:background="@color/colorPrimary500"
+    tools:context=".ui.CityActivityHawaii"
+    >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carProfilePicture"
@@ -50,7 +51,7 @@
         android:layout_marginEnd="20dp"
         android:text="@string/where_are_we"
         android:textColor="#212121"
-        android:textSize="40sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/carProfilePicture" />
 
@@ -62,7 +63,7 @@
         android:layout_marginEnd="20dp"
         android:text="@string/going_today"
         android:textColor="#757575"
-        android:textSize="40sp"
+        android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@id/textWhereAreWe" />
 
     <androidx.viewpager2.widget.ViewPager2
@@ -70,10 +71,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="36dp"
         android:paddingStart="60dp"
+
         android:paddingEnd="60dp"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/containerFob"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textGoing" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -82,5 +85,78 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="677dp" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/containerFob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="32dp"
+            android:backgroundTint="@color/colorAccentA200"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:src="@drawable/ic_location_city"
+            app:fabSize="normal" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonHawaii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/containerFob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_palm_tree"
+        android:elevation="4dp"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/floatingActionButtonBolivia"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="32dp"
+    android:clickable="true"
+    app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonHawaii"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:srcCompat="@drawable/ic_bolivia"
+        android:elevation="4dp"
+        android:visibility="invisible"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/floatingActionButtonTR"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="32dp"
+    android:clickable="true"
+    app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonBolivia"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:srcCompat="@drawable/ic_istanbul"
+        android:elevation="4dp"
+        android:visibility="invisible"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonABD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonTR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_america"
+        android:elevation="4dp"
+        android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

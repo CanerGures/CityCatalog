@@ -2,6 +2,8 @@ package com.example.citycatalog.ui
 
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
@@ -11,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.citycatalog.R
 import com.example.citycatalog.adapter.ViewPagerAdapterHawaii
 import com.example.citycatalog.model.TravelLocationModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class CityActivityHawaii : AppCompatActivity() {
     lateinit var viewPager: ViewPager2
@@ -22,6 +25,15 @@ class CityActivityHawaii : AppCompatActivity() {
         setContentView(R.layout.activity_city_hawaii)
 
         viewPager = findViewById(R.id.locationsViewPager)
+        val hawaiiFab : FloatingActionButton = findViewById(R.id.floatingActionButtonHawaii)
+        val istanbulFab : FloatingActionButton = findViewById(R.id.floatingActionButtonTR)
+        val boliviaFab : FloatingActionButton = findViewById(R.id.floatingActionButtonBolivia)
+        val newYorkFab : FloatingActionButton = findViewById(R.id.floatingActionButtonABD)
+        val mainFab : FloatingActionButton = findViewById(R.id.mainFab)
+        val openFabAnim : Animation = AnimationUtils.loadAnimation(this, R.anim.fab_open)
+        val closeFabAnim : Animation = AnimationUtils.loadAnimation(this, R.anim.fab_close)
+
+        var isOpen: Boolean = false
 
         val list = ArrayList<TravelLocationModel>()
 
@@ -70,5 +82,29 @@ class CityActivityHawaii : AppCompatActivity() {
         })
 
         viewPager.setPageTransformer(compositePageTransformer)
+
+        mainFab.setOnClickListener {
+
+            if(isOpen){
+
+                hawaiiFab.startAnimation(closeFabAnim)
+                boliviaFab.startAnimation(closeFabAnim)
+                istanbulFab.startAnimation(closeFabAnim)
+                newYorkFab.startAnimation(closeFabAnim)
+
+                isOpen = false
+
+
+            }else{
+                hawaiiFab.startAnimation(openFabAnim)
+                boliviaFab.startAnimation(openFabAnim)
+                istanbulFab.startAnimation(openFabAnim)
+                newYorkFab.startAnimation(openFabAnim)
+
+                isOpen = true
+
+            }
+        }
+
     }
 }
