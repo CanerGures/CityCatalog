@@ -14,6 +14,7 @@ import com.example.citycatalog.R
 import com.example.citycatalog.adapter.ViewPagerAdapterHawaii
 import com.example.citycatalog.model.TravelLocationModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlin.math.abs
 
 class CityActivityHawaii : AppCompatActivity() {
     lateinit var viewPager: ViewPager2
@@ -76,7 +77,7 @@ class CityActivityHawaii : AppCompatActivity() {
         compositePageTransformer.addTransformer(MarginPageTransformer(40))
         compositePageTransformer.addTransformer(ViewPager2.PageTransformer { view: View, fl: Float ->
             fun transformPage(page: View, position: Float) {
-                val r = 1 - Math.abs(position)
+                val r = 1 - abs(position)
                 page.scaleY = 0.95f + r * 0.05f
             }
         })
