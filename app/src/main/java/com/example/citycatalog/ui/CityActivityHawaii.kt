@@ -44,38 +44,43 @@ class CityActivityHawaii : AppCompatActivity() {
 
         val card1 = TravelLocationModel(
             "Hawaii",
-            "Kauai",
+            "Na Pali Coast, Kauai",
             "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
             4.8f,
-            1
+            1,
+            "Nā Pali Coast State Park is touted as one of the most beautiful places on earth. Regal mountains and fluted peaks embellished with dramatic sea caves and valleys make it the epitome of paradise. Ancient Hawaiians once resided within the many valleys in this esteemed locale. Their communities thrived, obtaining sustenance from fishing or harvesting produce like taro. Kalalau Valley nurtured the largest Nā Pali Coast community and continues drawing people to its cathedral-like beauty."
         )
         val card2 = TravelLocationModel(
             "Hawaii",
             "Kihei",
             "https://images.unsplash.com/photo-1462400362591-9ca55235346a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1017&q=80",
             4.5f,
-            2
+            2,
+            "Arguably the most beautiful island in Hawaii, Kauai (a.k.a. the Garden Island) is a quiet, laid-back island with a gorgeous mix of arid canyons and lush coastline. It lacks some of the major development found on Oahu, Maui, or even the Big Island, and while there’s not much of a party scene, the opportunities for relaxing and exploring are unparalleled. One of the most popular activities is exploring the Na Pali Coast, a stretch of mystical coastline that can be accessed either by boat or by hiking 11 miles each way and camping. The other star attraction on the island is the mile-long Waimea Canyon, often called the “Grand Canyon of the Pacific” due to its impressive size."
         )
         val card3 = TravelLocationModel(
             "Hawaii",
             "Hanauma Bay Nature Preserve",
             "https://images.unsplash.com/photo-1585352141368-b7833cca7e39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80",
             4.9f,
-            3
+            3,
+            "Hanauma Bay Nature Preserve, one of the most spectacular natural resources in Hawaii, is reaping the benefits of over a decade of moves to re-establish its pristine marine ecosystem. Recognizing the damage done by years of neglect and abuse by allowing some three million visitors annually, the City and County of Honolulu in 1990 laid out a plan to restore Hanauma to a clean, healthy state by reducing the number of visitors, establishing an education program, and instituting supportive restrictions."
         )
         val card4 = TravelLocationModel(
             "Hawaii",
             "Haleakala National Park",
             "https://images.unsplash.com/photo-1469826834904-e92950ee5bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1031&q=80",
             4.4f,
-            4
+            4,
+            "Located on the island of Maui, Haleakalā National Park extends from the 10,023 foot (3055m) summit of Haleakalā down the southeast flank of the mountain to the Kīpahulu coast near Hana. These two sections of the park are not directly connected by road, but both can be reached from Kahului. There are no gas stations within the park. The last place to get gas in route to the Summit Area is in the town of Pukalani, and along the Hana Highway before Hana is in the town of is in the town of Paia."
         )
         val card5 = TravelLocationModel(
             "Hawaii",
-            "Honolulu",
+            "Diamond Head, Oʻahu",
             "https://lh3.googleusercontent.com/proxy/G4GbinQti3CeMjkZZfvxg0Ek1DgOAmyzLPdCB1whxXhCRh8dLZA2Bm9oChYVOI2DvPPEvL1dfSJh11E8FhdU36Fx2g-82Y1aIcPLAVvxKkwFrIkFnolyJiFJg932oe_V1LEODKfuM-ryVns-QI2b",
             4.5f,
-            5
+            5,
+            "Diamond Head is part of the Ko’olau Range of volcanoes that began erupting below sea level over 2.6 million years ago. A single eruption around 300,000 years ago created the crater. The crater encompasses 350 acres. The crater is much larger than its rim as it was formed explosively. This type of formation is known as a tuff cone. "
         )
         list.add(card1)
         list.add(card2)

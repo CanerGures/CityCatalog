@@ -1,5 +1,6 @@
 package com.example.citycatalog.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.citycatalog.R
 import com.example.citycatalog.model.TravelLocationModel
+import com.example.citycatalog.ui.CityActivityDetail
 import kotlinx.android.synthetic.main.card_container_location.view.*
+import java.io.Serializable
 
 class ViewPagerAdapterCities(
     private val features: List<TravelLocationModel>
@@ -48,30 +51,9 @@ class ViewPagerAdapterCities(
 
         holder.itemView.setOnClickListener {
 
-            when (currentItem.id) {
-                1 -> {
-                }
-                2 -> {
-                }
-                3 -> {
-                }
-                4 -> {
-                }
-                5 -> {
-                }
-                6 -> {
-                }
-                7 -> {
-                }
-                8 -> {
-                }
-                9 -> {
-                }
-                10 -> {
-                }
-
-
-            }
+            val intent = Intent(it.context, CityActivityDetail::class.java)
+            intent.putExtra("cityObject", currentItem as Serializable)
+            it.context.startActivity(intent)
 
         }
     }
