@@ -1,7 +1,9 @@
 package com.example.citycatalog.ui
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
+import android.util.Pair
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -15,6 +17,7 @@ import com.example.citycatalog.R
 import com.example.citycatalog.adapter.ViewPagerAdapterCities
 import com.example.citycatalog.model.TravelLocationModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.card_container_location.*
 import kotlin.math.abs
 
 class CityActivityNewYork : AppCompatActivity() {
@@ -86,7 +89,11 @@ class CityActivityNewYork : AppCompatActivity() {
         list.add(card4)
         list.add(card5)
 
-        viewPager.adapter = ViewPagerAdapterCities(list)
+        viewPager.adapter = ViewPagerAdapterCities(list) { data: TravelLocationModel ->
+            itemClicked(
+                data
+            )
+        }
         viewPager.clipToPadding = false
         viewPager.clipChildren = false
         viewPager.offscreenPageLimit = 3
@@ -142,5 +149,14 @@ class CityActivityNewYork : AppCompatActivity() {
             val intent = Intent(it.context, CityActivityBolivia::class.java)
             it.context.startActivity(intent)
         }
+    }
+
+    private fun itemClicked(data: TravelLocationModel) {
+
+        val intent = Intent(this, CityActivityDetail::class.java)
+        val pair = Pair<View, String>(kbvLocation, "imageTransition")
+        val options: ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(this, pair)
+        intent.putExtra("cityObject", data)
+        startActivity(intent)
     }
 }

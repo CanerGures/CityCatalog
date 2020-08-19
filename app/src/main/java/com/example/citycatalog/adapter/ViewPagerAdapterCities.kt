@@ -1,6 +1,5 @@
 package com.example.citycatalog.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,19 +9,38 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.citycatalog.R
 import com.example.citycatalog.model.TravelLocationModel
-import com.example.citycatalog.ui.CityActivityDetail
 import kotlinx.android.synthetic.main.card_container_location.view.*
-import java.io.Serializable
 
 class ViewPagerAdapterCities(
-    private val features: List<TravelLocationModel>
+    private val features: List<TravelLocationModel>,
+    val callBack: (TravelLocationModel) -> Unit
 ) : RecyclerView.Adapter<ViewPagerAdapterCities.ViewPagerViewHolder>() {
     class ViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val kbvLocation: ImageView = itemView.kbvLocation
+        /*val kbvLocation: ImageView = itemView.kbvLocation
         val textTitle: TextView = itemView.textTitle
         val textLocation: TextView = itemView.textLocation
-        val textStarRating: TextView = itemView.textStarRating
+        val textStarRating: TextView = itemView.textStarRating*/
+
+        fun bind(data: TravelLocationModel, callback: (TravelLocationModel) -> Unit) {
+            val kbvLocation: ImageView = itemView.kbvLocation
+            val textTitle: TextView = itemView.textTitle
+            val textLocation: TextView = itemView.textLocation
+            val textStarRating: TextView = itemView.textStarRating
+
+
+            textTitle.text = data.title
+            textLocation.text = data.location
+            textStarRating.text = data.starRating.toString()
+
+            Glide.with(itemView.context)
+                .load(data.imageUrl)
+                .fitCenter()
+                .into(kbvLocation)
+
+            itemView.setOnClickListener { callback(data) }
+
+        }
 
 
     }
@@ -39,7 +57,7 @@ class ViewPagerAdapterCities(
     }
 
     override fun onBindViewHolder(holder: ViewPagerViewHolder, position: Int) {
-        val currentItem = features[position]
+        /*val currentItem = features[position]
         holder.textTitle.text = currentItem.title
         holder.textLocation.text = currentItem.location
         holder.textStarRating.text = currentItem.starRating.toString()
@@ -51,11 +69,16 @@ class ViewPagerAdapterCities(
 
         holder.itemView.setOnClickListener {
 
+
             val intent = Intent(it.context, CityActivityDetail::class.java)
+            val pair = Pair<View,String>(holder.kbvLocation, "imageTransition")
+            val options :ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(, pair)
             intent.putExtra("cityObject", currentItem as Serializable)
             it.context.startActivity(intent)
 
-        }
+        }*/
+
+        holder.bind(features[position], callBack)
     }
 
 }
