@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary500"
+    android:id="@+id/backgroundHawaii"
     tools:context=".ui.CityActivityHawaii"
     >
 
@@ -111,7 +112,7 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonHawaii"
+        android:id="@+id/hwFloatingActionButtonHawaii"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -125,40 +126,41 @@
         android:visibility="invisible"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/floatingActionButtonBolivia"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="32dp"
-    android:layout_marginBottom="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonHawaii"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:srcCompat="@drawable/ic_bolivia"
-        android:elevation="4dp"
-        android:visibility="invisible"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/floatingActionButtonTR"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="32dp"
-    android:layout_marginBottom="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonBolivia"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:srcCompat="@drawable/ic_istanbul"
-        android:elevation="4dp"
-        android:visibility="invisible"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonABD"
+        android:id="@+id/hwFloatingActionButtonBolivia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonTR"
+        app:layout_constraintBottom_toTopOf="@+id/hwFloatingActionButtonHawaii"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_bolivia"
+        android:elevation="4dp"
+        android:visibility="invisible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hwFloatingActionButtonTR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/hwFloatingActionButtonBolivia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_istanbul"
+        android:elevation="4dp"
+        android:visibility="invisible" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hwFloatingActionButtonABD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/hwFloatingActionButtonTR"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_america"
         android:elevation="4dp"

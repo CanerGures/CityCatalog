@@ -4,5 +4,6 @@ data class TravelLocationModel(
     val title: String,
     val location: String,
     val imageUrl: String,
-    val starRating: Float
+    val starRating: Float,
+    val id: Int
 )

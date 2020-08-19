@@ -110,7 +110,7 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonHawaii"
+        android:id="@+id/nyFloatingActionButtonHawaii"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -124,7 +124,7 @@
         app:srcCompat="@drawable/ic_palm_tree" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonBolivia"
+        android:id="@+id/nyFloatingActionButtonBolivia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -133,12 +133,12 @@
         android:elevation="4dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonHawaii"
+        app:layout_constraintBottom_toTopOf="@+id/nyFloatingActionButtonHawaii"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_bolivia" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonTR"
+        android:id="@+id/nyFloatingActionButtonTR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -147,12 +147,12 @@
         android:elevation="4dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonBolivia"
+        app:layout_constraintBottom_toTopOf="@+id/nyFloatingActionButtonBolivia"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_istanbul" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonABD"
+        android:id="@+id/nyFloatingActionButtonABD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -161,7 +161,7 @@
         android:elevation="4dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonTR"
+        app:layout_constraintBottom_toTopOf="@+id/nyFloatingActionButtonTR"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_america" />
 

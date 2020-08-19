@@ -11,10 +11,10 @@ import com.example.citycatalog.R
 import com.example.citycatalog.model.TravelLocationModel
 import kotlinx.android.synthetic.main.card_container_location.view.*
 
-class ViewPagerAdapterHawaii(
+class ViewPagerAdapterCities(
     private val features: List<TravelLocationModel>
-) : RecyclerView.Adapter<ViewPagerAdapterHawaii.ViewPagerViewHolder>() {
-    inner class ViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+) : RecyclerView.Adapter<ViewPagerAdapterCities.ViewPagerViewHolder>() {
+    class ViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val kbvLocation: ImageView = itemView.kbvLocation
         val textTitle: TextView = itemView.textTitle
@@ -45,6 +45,35 @@ class ViewPagerAdapterHawaii(
             .load(currentItem.imageUrl)
             .fitCenter()
             .into(holder.kbvLocation)
+
+        holder.itemView.setOnClickListener {
+
+            when (currentItem.id) {
+                1 -> {
+                }
+                2 -> {
+                }
+                3 -> {
+                }
+                4 -> {
+                }
+                5 -> {
+                }
+                6 -> {
+                }
+                7 -> {
+                }
+                8 -> {
+                }
+                9 -> {
+                }
+                10 -> {
+                }
+
+
+            }
+
+        }
     }
 
 }
