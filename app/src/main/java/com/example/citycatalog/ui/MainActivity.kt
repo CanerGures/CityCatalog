@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val recyclerView: RecyclerView = findViewById(R.id.rcyDashboardCard)
+
+
         val list = ArrayList<MainDashboardModel>()
 
         val mainCard1 = MainDashboardModel(
