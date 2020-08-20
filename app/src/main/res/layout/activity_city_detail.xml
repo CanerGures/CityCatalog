@@ -38,6 +38,7 @@
             android:paddingEnd="32dp"
             android:paddingBottom="32dp"
             android:text=""
+            android:scrollbars="vertical"
             app:lineHeight="26dp" />
     </LinearLayout>
 

@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     app:cardCornerRadius="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:stateListAnimator="@animator/elevation_on_touch"
     app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
