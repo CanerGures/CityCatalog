@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary500"
-    tools:context=".ui.CityActivityNewYork">
+    tools:context=".ui.CityActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/carProfilePicture"
@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
-            android:src="@drawable/image1" />
+            android:src="@drawable/profilepicture" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:text="@string/where_are_we"
         android:textColor="#212121"
@@ -110,7 +110,7 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/nyFloatingActionButtonHawaii"
+        android:id="@+id/FloatingActionButtonHawaii"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -124,7 +124,7 @@
         app:srcCompat="@drawable/ic_palm_tree" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/nyFloatingActionButtonBolivia"
+        android:id="@+id/FloatingActionButtonBolivia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -133,12 +133,12 @@
         android:elevation="4dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/nyFloatingActionButtonHawaii"
+        app:layout_constraintBottom_toTopOf="@+id/FloatingActionButtonHawaii"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_bolivia" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/nyFloatingActionButtonTR"
+        android:id="@+id/FloatingActionButtonTR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -147,12 +147,12 @@
         android:elevation="4dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/nyFloatingActionButtonBolivia"
+        app:layout_constraintBottom_toTopOf="@+id/FloatingActionButtonBolivia"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_istanbul" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/nyFloatingActionButtonABD"
+        android:id="@+id/FloatingActionButtonABD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -161,7 +161,7 @@
         android:elevation="4dp"
         android:focusable="true"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/nyFloatingActionButtonTR"
+        app:layout_constraintBottom_toTopOf="@+id/FloatingActionButtonTR"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_america" />
 

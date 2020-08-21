@@ -16,10 +16,9 @@
         <activity
             android:name=".ui.CityActivityDetail"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name=".ui.CityActivityBolivia" />
-        <activity android:name=".ui.CityActivityHawaii" />
-        <activity android:name=".ui.CityActivityNewYork" />
-        <activity android:name=".ui.CityActivityIstanbul" />
+
+        <activity android:name=".ui.CityActivity" />
+
         <activity
             android:name=".ui.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">

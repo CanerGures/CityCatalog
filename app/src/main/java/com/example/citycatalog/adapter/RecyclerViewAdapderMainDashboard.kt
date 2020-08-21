@@ -12,10 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.citycatalog.R
 import com.example.citycatalog.model.MainDashboardModel
-import com.example.citycatalog.ui.CityActivityBolivia
-import com.example.citycatalog.ui.CityActivityHawaii
-import com.example.citycatalog.ui.CityActivityIstanbul
-import com.example.citycatalog.ui.CityActivityNewYork
+import com.example.citycatalog.ui.CityActivity
 import kotlinx.android.synthetic.main.main_dashboard_cards.view.*
 
 class RecyclerViewAdapterMainDashboard(
@@ -57,7 +54,8 @@ class RecyclerViewAdapterMainDashboard(
                             R.animator.elevation_on_touch
                         )
                     holder.itemView.stateListAnimator = stateListAnimator
-                    val intent = Intent(it.context, CityActivityNewYork::class.java)
+                    val intent = Intent(it.context, CityActivity::class.java)
+                    intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
 
                 }
@@ -68,7 +66,8 @@ class RecyclerViewAdapterMainDashboard(
                             R.animator.elevation_on_touch
                         )
                     holder.itemView.stateListAnimator = stateListAnimator
-                    val intent = Intent(it.context, CityActivityHawaii::class.java)
+                    val intent = Intent(it.context, CityActivity::class.java)
+                    intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
 
                 }
@@ -79,7 +78,8 @@ class RecyclerViewAdapterMainDashboard(
                             R.animator.elevation_on_touch
                         )
                     holder.itemView.stateListAnimator = stateListAnimator
-                    val intent = Intent(it.context, CityActivityIstanbul::class.java)
+                    val intent = Intent(it.context, CityActivity::class.java)
+                    intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
 
 
@@ -91,7 +91,8 @@ class RecyclerViewAdapterMainDashboard(
                             R.animator.elevation_on_touch
                         )
                     holder.itemView.stateListAnimator = stateListAnimator
-                    val intent = Intent(it.context, CityActivityBolivia::class.java)
+                    val intent = Intent(it.context, CityActivity::class.java)
+                    intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
 
                 }
