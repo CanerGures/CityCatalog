@@ -5,21 +5,42 @@
         android:state_pressed="true">
         <set>
             <objectAnimator
-                android:duration="@android:integer/config_longAnimTime"
+                android:duration="700"
                 android:propertyName="translationZ"
-                android:valueTo="20dp"
+                android:valueTo="100dp"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="200"
+                android:propertyName="scaleX"
+                android:valueTo="1.1"
+                android:valueType="floatType" />
+
+            <objectAnimator
+                android:duration="200"
+                android:propertyName="scaleY"
+                android:valueTo="1.1"
                 android:valueType="floatType" />
         </set>
     </item>
-    <item
-        android:state_enabled="true"
-        android:state_pressed="false">
+    <item android:state_enabled="true">
         <set>
             <objectAnimator
-                android:duration="@android:integer/config_longAnimTime"
+                android:duration="@android:integer/config_shortAnimTime"
                 android:propertyName="translationZ"
                 android:valueTo="0dp"
                 android:valueType="floatType" />
+            <objectAnimator
+                android:duration="200"
+                android:propertyName="scaleX"
+                android:valueTo="1.1"
+                android:valueType="floatType" />
+
+            <objectAnimator
+                android:duration="200"
+                android:propertyName="scaleY"
+                android:valueTo="1.1"
+                android:valueType="floatType" />
         </set>
+
     </item>
 </selector>
