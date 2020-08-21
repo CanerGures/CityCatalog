@@ -40,6 +40,7 @@ class CityActivityBolivia : AppCompatActivity() {
         var isOpen = false
 
 
+
         val mockData = createMockData()
         viewPager.adapter = ViewPagerAdapterCities(mockData) { data: TravelLocationModel ->
             itemClicked(
@@ -137,6 +138,7 @@ class CityActivityBolivia : AppCompatActivity() {
             4.4f,
             14,
             "The Yungas Road is a cycle route about 60 km long which links the city of La Paz and the Yungas region of Bolivia. It draws about 25,000 tourists per year and is a major La Paz tourist attraction.[2] Many tour operators cater to downhill mountain biking, providing information, guides, transport and equipment. At least 18 cyclists have died on the road since 1998. The tourist route is a 64 km long road with 3500 metres of descent. The route includes the Cotapata-Santa Bárbara section. It replaced the old road, built in 1930. It was considered dangerous because of its steep slopes, narrow single track, lack of guardrails, rain, and fog, and was nicknamed the \"Road of Death\"."
+
         )
         val card15 = TravelLocationModel(
             "Bolivia",

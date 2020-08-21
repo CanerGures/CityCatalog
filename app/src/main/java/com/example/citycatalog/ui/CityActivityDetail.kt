@@ -9,6 +9,7 @@ import com.example.citycatalog.R
 import com.example.citycatalog.model.TravelLocationModel
 
 class CityActivityDetail : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city_detail)
@@ -19,12 +20,14 @@ class CityActivityDetail : AppCompatActivity() {
 
         val cityObject = intent.extras?.get("cityObject") as TravelLocationModel
 
+
         textViewContent.text = cityObject.info
         textViewTopic.text = "Explore the " + cityObject.location
         Glide.with(this)
             .load(cityObject.imageUrl)
             .fitCenter()
             .into(headerImage)
+
 
     }
 }
