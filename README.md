@@ -10,7 +10,7 @@ A demonstration of my learnings about Materiel Design, UI components, Animations
 ![](https://media.giphy.com/media/McDrOpwDzRJ65bsYfk/giphy.gif)
 ![](https://media.giphy.com/media/XcXa838IqwBUWurmL4/giphy.gif)
 
-## Technologies and Patterns Used
+## Technologies Used
 
 - Material Design
 - Splash Screen
