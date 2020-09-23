@@ -1,7 +1,5 @@
 package com.example.citycatalog.adapter
 
-import android.animation.AnimatorInflater
-import android.animation.StateListAnimator
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -48,36 +46,36 @@ class RecyclerViewAdapterMainDashboard(
 
             when (currentItem.cityId) {
                 1 -> {
-                    val stateListAnimator: StateListAnimator =
-                        AnimatorInflater.loadStateListAnimator(
-                            it.context,
-                            R.animator.elevation_on_touch
-                        )
-                    holder.itemView.stateListAnimator = stateListAnimator
+                    //   val stateListAnimator: StateListAnimator =
+                    //      AnimatorInflater.loadStateListAnimator(
+                    //          it.context,
+                    //         R.animator.elevation_on_touch
+                    //      )
+                    //   holder.itemView.stateListAnimator = stateListAnimator
                     val intent = Intent(it.context, CityActivity::class.java)
                     intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
 
                 }
                 2 -> {
-                    val stateListAnimator: StateListAnimator =
-                        AnimatorInflater.loadStateListAnimator(
-                            it.context,
-                            R.animator.elevation_on_touch
-                        )
-                    holder.itemView.stateListAnimator = stateListAnimator
+                    // val stateListAnimator: StateListAnimator =
+                    //    AnimatorInflater.loadStateListAnimator(
+                    //       it.context,
+                    //       R.animator.elevation_on_touch
+                    //    )
+                    //  holder.itemView.stateListAnimator = stateListAnimator
                     val intent = Intent(it.context, CityActivity::class.java)
                     intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
 
                 }
                 3 -> {
-                    val stateListAnimator: StateListAnimator =
-                        AnimatorInflater.loadStateListAnimator(
-                            it.context,
-                            R.animator.elevation_on_touch
-                        )
-                    holder.itemView.stateListAnimator = stateListAnimator
+                    // val stateListAnimator: StateListAnimator =
+                    //    AnimatorInflater.loadStateListAnimator(
+                    //        it.context,
+                    //        R.animator.elevation_on_touch
+                    //    )
+                    // holder.itemView.stateListAnimator = stateListAnimator
                     val intent = Intent(it.context, CityActivity::class.java)
                     intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
@@ -85,12 +83,12 @@ class RecyclerViewAdapterMainDashboard(
 
                 }
                 4 -> {
-                    val stateListAnimator: StateListAnimator =
-                        AnimatorInflater.loadStateListAnimator(
-                            it.context,
-                            R.animator.elevation_on_touch
-                        )
-                    holder.itemView.stateListAnimator = stateListAnimator
+                    // val stateListAnimator: StateListAnimator =
+                    //   AnimatorInflater.loadStateListAnimator(
+                    //       it.context,
+                    //       R.animator.elevation_on_touch
+                    //   )
+                    //holder.itemView.stateListAnimator = stateListAnimator
                     val intent = Intent(it.context, CityActivity::class.java)
                     intent.putExtra("currentItem", currentItem)
                     it.context.startActivity(intent)
